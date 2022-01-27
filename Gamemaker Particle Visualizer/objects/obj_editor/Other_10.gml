@@ -44,10 +44,18 @@ if(!directory_exists(LocalFolder)){
 	  
 	  var _file = file_text_open_read(_data);
 	  
-	  global.pallete = real(file_text_read_string(_file));
+	  var _f = file_text_read_string(_file);
+	  if(_f!=""){
+	  global.pallete = real(_f);
+	  }
+	  
 	  file_text_readln(_file);
 	  
-	  global.RPC = real(file_text_read_string(_file));
+	  var _f = file_text_read_string(_file);
+	  if(_f!=""){
+	  global.RPC = real(_f);
+	  }
+	  
 	  file_text_readln(_file);
 	  
 	  file_text_close(_file);
