@@ -18,8 +18,38 @@ The entire project is open source for everyone to customize.
 
 <hr>
 
+# How to use
+
+HOW TO SET UP IN YOUR PROJECTS
+
+1. Import the script (Tools > Import Local Package> select setParticleType.yymps in the tool's folder)
+2. In the object's create event create the particle system.
+This doesn't necessarily have to be in the same object and can be handled in any way you like, the script just needs to be able to access the variable holding it.
+The functions for this is variable = part_system_create(); 
+3. Next up you just have to use the script to save the particle type to a variable.
+Particle types hold all information for a single particle.
+4. And with this you're done, you can now use emitters to get your particle up and running.
+For more information on emitters check: https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Emitters/Particle_Emitters.htm
+
+More information about how particles work can be found in the link below, you'll still have to learn
+how particles work in order to use them to their true potential.
+https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm
+
+<hr>
+
 # Credits
 
 Execute Shell Simple by <a href="https://github.com/YellowAfterlife">YellowAfterLife</a>
 <br>
 [nkrapivin](https://github.com/nkrapivin)'s [Discord RPC extension](https://github.com/nkrapivin/NekoPresence) for Gamemaker
+
+<hr>
+
+# Changelog
+
+<h2>1.1.0</h2>
+<ul>
+ <li>Added an option to visualize the particle's direction limits.</li>
+ <li>Updated setParticleType to be quicker to set up and use.</li>
+ <li>Added a .yymps to import the script more easily.</li>
+</ul>
