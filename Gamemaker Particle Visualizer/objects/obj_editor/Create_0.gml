@@ -6,11 +6,13 @@ window_command_hook(window_command_close);
 windowName = "Gamemaker Particle Visualizer v1.1.0";
 window_set_caption(windowName);
 
+version_id = 1.1;
 
 
 ReadString=return_readme();
 
 unsaved = 0;
+
 
 
 Blue = rgb_to_bgr($29A6DB);
@@ -32,7 +34,7 @@ enum EditorState {
 	 editing
 }
 
-
+paused=false;
 
 
 State = EditorState.wait;
@@ -49,8 +51,9 @@ FileList = ds_list_create();
 var _local = environment_get_variable("LOCALAPPDATA");
 LocalFolder = _local+"/Gamemaker_Particle_Visualizer";
 
+legacy=0;
 
-Extension = ".ps";
+Extension = ".GPV";
 
 CurrentFile = -4;
 CurrentFileName = "";

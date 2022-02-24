@@ -4,7 +4,7 @@ function open_file(){
         var _file = get_open_filename("*"+Extension,"");
 							
 		if(_file!="")&&(file_exists(_file)){
-		   if(!is_extension(_file,Extension)){show_message("ERROR - Selected file is not a "+Extension+" file");}
+		   if(!is_extension(_file,Extension) && !is_extension(_file,".ps")){show_message("ERROR - Selected file is not a "+Extension+" file");}
 			else{
 			  load_particle(_file);   
 		   }

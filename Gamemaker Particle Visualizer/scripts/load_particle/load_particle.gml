@@ -1,6 +1,12 @@
 function load_particle(path){
 
-     var _map = ds_map_secure_load(path);
+   if(is_extension(path,Extension)){
+	   legacy=false;
+     var _map = new_ds_map_secure_load(path);
+   }else{
+	   legacy=true;
+	 var _map = ds_map_secure_load(path);   
+   }
 	
 	 
 	 CurrentFile = path;
@@ -58,6 +64,14 @@ function load_particle(path){
 	 
 	 emit_shape = _map[? "Shape"];
 	 emit_distr = _map[? "Distr"];
+	 
+	 //Upadte exclusive stuff
+	 if(ds_map_exists(_map,"Version")&&(_map[? "Version"]>=version_id)){
+	    part_X = _map[? "Editor_X"];	 
+	    part_Y = _map[? "Editor_Y"];	 
+	    emit_W = _map[? "Editor_W"];	 
+	    emit_H = _map[? "Editor_H"];	 
+	 }
 	 
 	 //Sprites
 	 

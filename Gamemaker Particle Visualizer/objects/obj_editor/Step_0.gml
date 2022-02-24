@@ -64,7 +64,15 @@ switch(State){
 			if(part_emitter_exists(syst,emit)){
 				
 			   if(part_type_exists(type)){	
-			   part_emitter_burst(syst,emit,type,emit_n);
+				   
+				  if(!paused){ 
+			         part_emitter_burst(syst,emit,type,emit_n);
+				  }
+				  
+				  if(keyboard_check_pressed(ord("B"))){
+					  part_emitter_burst(syst,emit,type,emit_n);
+				  }
+				  
 			   part_type_alpha3(type,Alpha[0],Alpha[1],Alpha[2]);
 			   part_type_blend(type,Blend);
 			   part_type_color3(type,rgb_to_bgr(PartColor[0]),rgb_to_bgr(PartColor[1]),rgb_to_bgr(PartColor[2]));

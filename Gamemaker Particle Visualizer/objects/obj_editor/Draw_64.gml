@@ -238,7 +238,7 @@ switch(State){
 					var _file = get_open_filename("*"+Extension,"");
 							
 		            if(_file!="")&&(file_exists(_file)){
-		               if(!is_extension(_file,Extension)){show_message("ERROR - Selected file is not a "+Extension+" file");}
+		               if(!is_extension(_file,Extension) && !is_extension(_file,".ps")){show_message("ERROR - Selected file is not a "+Extension+" file");}
 			           else{
 					   State=EditorState.editing;
 					   create_default_particle();
@@ -1053,7 +1053,7 @@ switch(State){
 			  #endregion
 			  
 			  
-			  for(var a=0; a<9; a++){
+			  for(var a=0; a<10; a++){
 				  
 				  var _sprite = spr_back_button;
 				  
@@ -1063,6 +1063,7 @@ switch(State){
 							 case 5: _sprite=spr_position_button; break; case 6: _sprite=spr_angle_button; break;
 							 case 7: _sprite=spr_resize_button; break; 
 							 case 8: _sprite=spr_copy_button; break; 
+							 case 9: _sprite=spr_pause_button; if(!paused){_sprite=spr_start_button;} break;
 						   }
 				  
 				  //Back
@@ -1088,6 +1089,7 @@ switch(State){
 						case 6: Message="Show direction"; break;
 						case 7: Message="Reset emitter"; break;
 						case 8: Message="Copy script"; break;
+						case 9: Message="Toggle stream"; break;
 					 }
 				 
 				     if(mouse_check_button_pressed(mb_left)){
@@ -1135,7 +1137,7 @@ switch(State){
 						var _f;
 			  
 			            if(CurrentFile==-4){ _f = DefaultName; }
-			            else{ _f = CurrentFileName; }
+			            else{ _f = string_replace(CurrentFileName,".ps",""); }
 						
 						var _path = get_save_filename("*"+Extension,_f+Extension);
 						
@@ -1170,6 +1172,10 @@ switch(State){
 					    case 8:
 						copyMainScript();
 						break;
+						
+						case 9:
+						paused=!paused;
+						break;
 					
 						}
 					  
@@ -1183,7 +1189,10 @@ switch(State){
 			  if(CurrentFile==-4){ _f = DefaultName; }
 			  else{ _f = CurrentFileName; }
 			  
+			  if(!legacy){ _f=string_replace(_f,".ps",""); }
+			  
 			  var _y =Extension;
+			  if(legacy){ _y = ""; }
 			  if(unsaved==true){_y=Extension+"*";}
 			  
 			  draw_set_color(c_white);
@@ -1194,6 +1203,7 @@ switch(State){
 			  draw_set_valign(fa_bottom);
 			  draw_text(room_width-8,room_height-10,Message);
 			  draw_set_halign(fa_left);
+			  draw_text(8,room_height-10,"Press B to burst particle");
 			  
 			  /*if(Use_sprite)&&(ds_list_size(SpriteArr)>0){ 
 			  if(sprite_exists(SpriteArr[| min(ds_list_size(SpriteArr),Sprite) ])){

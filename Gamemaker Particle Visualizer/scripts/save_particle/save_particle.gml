@@ -1,5 +1,5 @@
 function save_particle(name,path=0){
- 
+ legacy=false;
     var _finalpath = LocalFolder+"/Projects"+name+Extension;
 	
 	if(is_string(path)){
@@ -16,6 +16,13 @@ function save_particle(name,path=0){
 	var _map = ds_map_create();
 	
 	//Save all the information in a map
+	_map[? "Version"]=version_id;
+	
+	_map[? "Editor_X"]=part_X;
+	_map[? "Editor_Y"]=part_Y;
+	_map[? "Editor_W"]=emit_W;
+	_map[? "Editor_H"]=emit_H;
+	
 	_map[? "name"]=name;
 	
 	_map[? "emit_number"]=emit_n;
@@ -98,7 +105,7 @@ function save_particle(name,path=0){
 	debug_over = true;
 	
 	//Save the map and leave
-	ds_map_secure_save(_map,_finalpath)
+	new_ds_map_secure_save(_map,_finalpath);
 	ds_map_destroy(_map);
 	
 	unsaved=false;
