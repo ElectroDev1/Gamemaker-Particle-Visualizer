@@ -21,14 +21,21 @@ The entire project is open source for everyone to customize.
 # How to use
 
 HOW TO SET UP IN YOUR PROJECTS
-
-1. Import the script (Tools > Import Local Package> select setParticleType.yymps in the tool's folder)
+ 
+1. Import the script (Tools > Import Local Package> select GPV_scripts.yymps in the tool's folder)
 2. In the object's create event create the particle system.
 This doesn't necessarily have to be in the same object and can be handled in any way you like, the script just needs to be able to access the variable holding it.
 The functions for this is variable = part_system_create(); 
-3. Next up you just have to use the script to save the particle type to a variable.
-Particle types hold all information for a single particle.
-4. And with this you're done, you can now use emitters to get your particle up and running.
+
+METHOD 1
+1. Click on the copy script button in GPV
+2. Paste the script in your code and save it to the type variable
+
+METHOD 2
+1. Save your .GPV file in your game's Included Files (can be accessed from the three lines button at the top-right in GMS2)
+2. Use the script loadParticleType and set the file's name (extension included) and assign it to a variable
+
+And with this you're done, the particle is now saved and you can use emitters to get your particle up and running.
 For more information on emitters check: https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Emitters/Particle_Emitters.htm
 
 More information about how particles work can be found in the link below, you'll still have to learn
