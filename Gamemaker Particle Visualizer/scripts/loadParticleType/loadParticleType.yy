@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Draw",
-    "path": "folders/Scripts/Draw.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "draw_pie",
+  "name": "loadParticleType",
   "tags": [],
   "resourceType": "GMScript",
 }
