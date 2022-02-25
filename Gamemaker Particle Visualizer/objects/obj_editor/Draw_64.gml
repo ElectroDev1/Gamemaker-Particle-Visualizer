@@ -277,7 +277,7 @@ switch(State){
 				draw_set_alpha(1);
 				
 				if(mouse_check_button_pressed(mb_left)){
-				   execute_shell_simple("https://electrodev1.github.io/");	
+				   execute_shell_simple("https://electrodev1.github.io/home/");	
 				}
 				
 			 }
