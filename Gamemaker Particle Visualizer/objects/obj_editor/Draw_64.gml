@@ -318,7 +318,7 @@ switch(State){
 			 
 			 draw_set_colour(Color[1]);
 			 
-			 var _STR = "Open ReadME"; var _X = room_width/2+20; var _Y = 244;
+			 var _STR = "Documentation"; var _X = room_width/2+20; var _Y = 244;
 			 
 			 draw_rectangle(_X-string_width(_STR)/2-8,
 			 _Y-string_height(_STR)/2-8,
@@ -338,7 +338,7 @@ switch(State){
 				draw_set_alpha(1);
 				
 				if(mouse_check_button_pressed(mb_left)){
-				   execute_shell_simple(LocalFolder+"/ReadME.txt");	
+				   execute_shell_simple("https://electrodev1.github.io/GPV/");	
 				}
 				
 			 }
