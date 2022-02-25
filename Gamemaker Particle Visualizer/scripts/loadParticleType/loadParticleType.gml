@@ -24,7 +24,7 @@ function loadParticleType(filename){
 		 show_debug_message(_map);
 		 
 		 part_type_alpha3(_type,_map[? "Alpha0"],_map[? "Alpha1"],_map[? "Alpha2"]);		 
-		 part_type_color3(_type,_map[? "Color0"],_map[? "Color1"],_map[? "Color2"]);
+		 part_type_color3(_type,rgb_to_bgr(_map[? "Color0"]),rgb_to_bgr(_map[? "Color1"]),rgb_to_bgr(_map[? "Color2"]));
 		 
 		 part_type_scale(_type,_map[? "Scale0"],_map[? "Scale1"]);
 		 part_type_gravity(_type,_map[? "Gravity0"],_map[? "Gravity1"]);
@@ -36,6 +36,8 @@ function loadParticleType(filename){
 		 part_type_speed(_type,_map[? "Speed0"],_map[? "Speed1"],_map[? "Speed2"],_map[? "Speed3"]);
 		 part_type_direction(_type,_map[? "Direction0"],_map[? "Direction1"],_map[? "Direction2"],_map[? "Direction3"]);
 		 part_type_orientation(_type,_map[? "Angle0"],_map[? "Angle1"],_map[? "Angle2"],_map[? "Angle3"],_map[? "Angle4"]);
+		 
+		 part_type_shape(_type,_map[? "Look1"]); 
 		 
 		 //Sprite
 		 if(_map[? "Look0"]){

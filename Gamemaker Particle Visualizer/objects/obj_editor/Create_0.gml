@@ -3,7 +3,7 @@
 window_command_hook(window_command_close);
 
 //Current version v1.0.0
-windowName = "Gamemaker Particle Visualizer v1.1.0";
+windowName = "Gamemaker Particle Visualizer v1.2.4";
 window_set_caption(windowName);
 
 version_id = 1.1;
