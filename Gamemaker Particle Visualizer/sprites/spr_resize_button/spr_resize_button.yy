@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_resize_button","path":"sprites/spr_resize_button/spr_resize_button.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_resize_button",
     "tags": [],
     "resourceType": "GMSequence",

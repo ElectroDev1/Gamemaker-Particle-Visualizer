@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_open_button","path":"sprites/spr_open_button/spr_open_button.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_open_button",
     "tags": [],
     "resourceType": "GMSequence",

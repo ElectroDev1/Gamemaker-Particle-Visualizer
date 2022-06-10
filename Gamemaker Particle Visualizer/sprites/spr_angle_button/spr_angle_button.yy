@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_angle_button","path":"sprites/spr_angle_button/spr_angle_button.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_angle_button",
     "tags": [],
     "resourceType": "GMSequence",

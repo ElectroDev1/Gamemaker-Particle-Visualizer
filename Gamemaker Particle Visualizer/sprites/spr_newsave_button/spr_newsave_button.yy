@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_newsave_button","path":"sprites/spr_newsave_button/spr_newsave_button.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_newsave_button",
     "tags": [],
     "resourceType": "GMSequence",

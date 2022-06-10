@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_copy_button","path":"sprites/spr_copy_button/spr_copy_button.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_copy_button",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pause_button","path":"sprites/spr_pause_button/spr_pause_button.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pause_button",
     "tags": [],
     "resourceType": "GMSequence",
